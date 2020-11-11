@@ -1,6 +1,4 @@
-### C2-of-aliyun-OSS
-
-----
+## C2-of-aliyun-OSS
 
 基于阿里云 OSS 通信的 C2（Demo）
 
