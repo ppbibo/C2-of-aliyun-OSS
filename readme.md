@@ -20,7 +20,7 @@
 
 ![image-20201111135204798](img/image-20201111135204798.png)
 
-
+![image-20201111140632708](img/image-20201111140632708.png)
 
 Tips: 编译请使用python3的pyinstaller , python2 的pyinstaller 存在报错。
 
