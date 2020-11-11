@@ -18,11 +18,13 @@
 4. 被控机器运行 client.py。
 5. 攻击机运行 server.py 来执行远程命令并下发到被控机器。
 
-![image-20201111135204798](img/image-20201111135204798.png)
-
 ![image-20201111140632708](img/image-20201111140632708.png)
 
-Tips: 编译请使用python3的pyinstaller , python2 的pyinstaller 存在报错。
+![image-20201111135204798](img/image-20201111135204798.png)
+
+
+
+Tips: 编译请使用python3的pyinstaller , python2 的pyinstaller 在编译 oss2 模块时存在报错。
 
 
 
@@ -31,8 +33,6 @@ Tips: 编译请使用python3的pyinstaller , python2 的pyinstaller 存在报错
 时间：20201111
 
 待添加功能文件下载。
-
-
 
 
 
