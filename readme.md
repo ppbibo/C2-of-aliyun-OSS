@@ -1,39 +1,22 @@
-## C2-of-aliyun-OSS
+基于阿里云 OSS 通信的 C&C（Demo）
 
-基于阿里云 OSS 通信的 C2（Demo）
+在一次项目中客户主机存在安全策略，允许访问部分大厂域名，所以写了个利用阿里云 OSS 来做为中转的 DEMO，这里只是实现了命令执行，建议使用Go来编写客户端，服务端可根据个人熟悉的程序语言编写，而且该程序对于杀毒软件非常不友好，只要内置代码不要添加危险动作，简单的文件管理，命令执行基本不查杀。
 
-在一次项目中客户主机设置了安全策略，允许访问部分大厂域名，所以写了个利用阿里云OSS来做为中转的 DEMO。
-
-
+---- 
 
 ## 使用方法
 
-1. 购买阿里云 OSS 对象存储。
+1.上传 execute_result.txt  oss_command_file.txt 两个文件到阿里云OSS根目录。
 
-2. 上传 execute_result.txt  oss_command_file.txt 两个文件到阿里云OSS。
+![57350-gkcja2r205u.png](http://www.secbook.info/usr/uploads/2020/11/3199669456.png)
 
-![image-20201111135923411](img/image-20201111135923411.png)
+2.替换两个 Python 文件代码中的 ossurl、BucketName、AccessKeyId、AccessKeySecret 参数内容。
+3.被控机器运行 client.py ，攻击机运行 server.py 来执行远程命令上传到 OSS并下发到被控机器。
 
-3. 替换两个文件代码中的ossurl、BucketName、AccessKeyId、AccessKeySecret 参数内容。
-4. 被控机器运行 client.py。
-5. 攻击机运行 server.py 来执行远程命令并下发到被控机器。
-
-![image-20201111140632708](img/image-20201111140632708.png)
-
-![image-20201111135204798](img/image-20201111135204798.png)
-
-
+![123.gif](http://www.secbook.info/usr/uploads/2021/02/434934219.gif)
 
 Tips: 编译请使用python3的pyinstaller , python2 的pyinstaller 在编译 oss2 模块时存在报错。
 
+---- 
 
-
-## 日志
-
-时间：20201111
-
-待添加功能文件下载。
-
-
-
-参考：http://www.secbook.info/index.php/archives/463.html
+项目地址：https://github.com/ppbibo/C2-of-aliyun-OSS
